@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:spotify/my_flutter_app_icons.dart';
+import 'my_flutter_app_icons.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -18,7 +20,7 @@ class HomePage extends StatelessWidget {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.blue,
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.white.withOpacity(0.8),
         items: [
@@ -31,11 +33,9 @@ class HomePage extends StatelessWidget {
             label: "Search",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.library_books_outlined),
-            label: "Library",
-          ),
+              icon: Icon(Icons.library_books_outlined), label: "Library"),
           BottomNavigationBarItem(
-            icon: Icon(Icons.shop),
+            icon: Icon(MyFlutterApp.spotify),
             label: "Premium",
           ),
         ],
@@ -97,17 +97,111 @@ class HomePage extends StatelessWidget {
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 22,
-                  color: Colors.white
+                  color: Colors.white,
                 ),
               ),
             ),
-
+            const SizedBox(height: 24.0),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  const SizedBox(width: 16.0),
+                  Column(
+                    children: [
+                      Container(
+                        height: 120,
+                        width: 120,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(90),
+                        ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(90),
+                          child: Image.asset(
+                            'assets/kendrick.jpg',
+                            filterQuality: FilterQuality.high,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 16.0),
+                      Text(
+                        "Kemdrick Lamar",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 12,
+                        ),
+                      )
+                    ],
+                  ),
+                  const SizedBox(width: 24.0),
+                  Column(
+                    children: [
+                      Container(
+                        height: 120,
+                        width: 120,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(90),
+                        ),
+                        child: Image.asset(
+                          'assets/damn.jpg',
+                          filterQuality: FilterQuality.high,
+                        ),
+                      ),
+                      const SizedBox(height: 16.0),
+                      Text(
+                        "Damn",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 12,
+                        ),
+                      )
+                    ],
+                  ),
+                  const SizedBox(width: 24.0),
+                  Column(
+                    children: [
+                      Container(
+                        height: 120,
+                        width: 120,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(90)),
+                        child: Image.asset(
+                          'assets/2014.jpg',
+                          filterQuality: FilterQuality.high,
+                        ),
+                      ),
+                      const SizedBox(height: 16.0),
+                      Text(
+                        "J. Cole - 2014 ...",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 12,
+                        ),
+                      )
+                    ],
+                  )
+                ],
+              ),
+            ),
+            const SizedBox(height: 24.0),
+            Padding(
+              padding: const EdgeInsets.only(left: 16.0),
+              child: Text(
+                "Recommended for you",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 22,
+                  color: Colors.white,
+                ),
+              ),
+            )
           ],
         ),
       ),
     );
   }
 }
+
 class AlbumMini extends StatelessWidget {
   final String image;
   final String text;
@@ -121,10 +215,10 @@ class AlbumMini extends StatelessWidget {
       height: 60,
       decoration: BoxDecoration(
         color: Color(0xFF313132),
-        borderRadius: BorderRadius.circular(8.0),
+        borderRadius: BorderRadius.circular(10.0),
       ),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(8.0),
+        borderRadius: BorderRadius.circular(10.0),
         child: Row(
           children: [
             Container(
@@ -148,4 +242,3 @@ class AlbumMini extends StatelessWidget {
     );
   }
 }
-

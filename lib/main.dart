@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
         canvasColor: Color(0xFF191919),
         visualDensity: VisualDensity.adaptivePlatformDensity,
         fontFamily: GoogleFonts.montserrat().fontFamily,
