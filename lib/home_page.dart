@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:spotify/my_flutter_app_icons.dart';
 import 'my_flutter_app_icons.dart';
 
