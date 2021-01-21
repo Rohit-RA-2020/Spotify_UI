@@ -193,6 +193,83 @@ class HomePage extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
+            ),
+            const SizedBox(height: 24.0),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  const SizedBox(width: 16.0),
+                  Column(
+                    children: [
+                      Container(
+                        height: 120,
+                        width: 120,
+                        child: Image.asset(
+                          'asset/top50global.PNG',
+                          filterQuality: FilterQuality.high,
+                        ),
+                      ),
+                      const SizedBox(height: 16.0),
+                      Text(
+                        "Top 50 Global",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 12,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(width: 24.0),
+                  Column(
+                    children: [
+                      Container(
+                        height: 120,
+                        width: 120,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(90),
+                        ),
+                        child: Image.asset(
+                          'assets/summerRewind.PNG',
+                          filterQuality: FilterQuality.high,
+                        ),
+                      ),
+                      const SizedBox(height: 16.0),
+                      Text(
+                        "Summer Rewind",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 12,
+                        ),
+                      )
+                    ],
+                  ),
+                  const SizedBox(width: 24.0),
+                  Column(
+                    children: [
+                      Container(
+                        height: 120,
+                        width: 120,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(90),
+                        ),
+                        child: Image.asset(
+                          'assets/top50italy.PNG',
+                          filterQuality: FilterQuality.high,
+                        ),
+                      ),
+                      const SizedBox(height: 16.0),
+                      Text(
+                        "Top 50 Italy",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 12,
+                        ),
+                      )
+                    ],
+                  )
+                ],
+              ),
             )
           ],
         ),
